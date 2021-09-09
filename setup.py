@@ -99,6 +99,7 @@ setup(
         "python-axolotl",
         "cryptography",
         "python-magic",
+        "python-resize-image",
     ],
     extras_require={},
 )
