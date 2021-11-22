@@ -2,6 +2,7 @@ import os
 import time
 import collections
 import numpy as np
+import traceback
 
 from selenium.common.exceptions import WebDriverException, JavascriptException
 from six import string_types
@@ -182,7 +183,7 @@ class NewMessagesObservable(Thread):
 
                     self._inform_all(new_messages)
             except Exception as e:  # noqa F841
-                pass
+                traceback.print_exc()
 
             time.sleep(2)
 
